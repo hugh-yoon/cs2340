@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/lavender"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/classNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/coming_soon"
+        android:hint="Class Name"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/examDateEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/coming_soon"
+        android:hint="Exam Date"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/examTimeEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/coming_soon"
+        android:hint="Exam Time"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/examLocationEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/coming_soon"
+        android:hint="Exam Location"
+        android:minHeight="48dp" />
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:text="Add to Schedule"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/examListLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+
+    </ScrollView>
+
+</LinearLayout>

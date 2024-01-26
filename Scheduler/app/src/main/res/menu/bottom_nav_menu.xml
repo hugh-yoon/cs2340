@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="Schedule"
+        android:icon="@drawable/schedule"
+        android:id="@+id/schedule"/>
+    <item
+        android:title="Assignment"
+        android:icon="@drawable/assignment"
+        android:id="@+id/assignment"/>
+    <item
+        android:title="Exam"
+        android:icon="@drawable/exam"
+        android:id="@+id/exam"/>
+    <item
+        android:title="To-Do"
+        android:icon="@drawable/to_do"
+        android:id="@+id/to_do"/>
+</menu>
