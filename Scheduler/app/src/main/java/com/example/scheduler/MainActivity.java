@@ -45,7 +45,18 @@ public class MainActivity extends AppCompatActivity {
     private void replaceFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.frameLayout, fragment);
+
+        Fragment currentFragment = fragmentManager.findFragmentById(R.id.frameLayout);
+        if (currentFragment != null) {
+            fragmentTransaction.hide(currentFragment);
+        }
+
+        if (fragment.isAdded()) {
+            fragmentTransaction.show(fragment);
+        } else {
+            fragmentTransaction.add(R.id.frameLayout, fragment);
+        }
+
         fragmentTransaction.commit();
     }
 }

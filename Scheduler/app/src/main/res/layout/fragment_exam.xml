@@ -3,8 +3,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/lavender"
+    android:background="@color/purple_200"
     android:padding="16dp">
+
+    <EditText
+        android:id="@+id/nameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/coming_soon"
+        android:hint="Your Name"
+        android:minHeight="48dp" />
 
     <EditText
         android:id="@+id/classNameEditText"
@@ -15,27 +23,31 @@
         android:minHeight="48dp" />
 
     <EditText
-        android:id="@+id/examDateEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/coming_soon"
-        android:hint="Exam Date"
-        android:minHeight="48dp" />
-
-    <EditText
-        android:id="@+id/examTimeEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/coming_soon"
-        android:hint="Exam Time"
-        android:minHeight="48dp" />
-
-    <EditText
         android:id="@+id/examLocationEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/coming_soon"
         android:hint="Exam Location"
+        android:minHeight="48dp" />
+
+    <TextView
+        android:id="@+id/examDateTextView"
+        android:layout_width="156dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/coming_soon"
+        android:gravity="center"
+        android:hint="Exam Date: MM/DD"
+        android:inputType="date"
+        android:minHeight="48dp" />
+
+    <TextView
+        android:id="@+id/examTimeTextView"
+        android:layout_width="156dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/coming_soon"
+        android:gravity="center"
+        android:hint="Exam Time: HH:MM"
+        android:inputType="time"
         android:minHeight="48dp" />
 
     <Button
@@ -45,17 +57,11 @@
         android:backgroundTint="@color/black"
         android:text="Add to Schedule"/>
 
-    <ScrollView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/examListLayout"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
-
-        <LinearLayout
-            android:id="@+id/examListLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"/>
-
-    </ScrollView>
+        android:layout_height="405dp"
+        android:layout_below="@id/addButton"
+        android:layout_marginTop="16dp" />
 
 </LinearLayout>

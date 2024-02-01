@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -9,31 +11,49 @@
         android:id="@+id/taskNameEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Task Name"/>
+        android:fontFamily="@font/coming_soon"
+        android:hint="Task Name"
+        android:minHeight="48dp" />
 
     <EditText
-        android:id="@+id/deadlineEditText"
+        android:id="@+id/courseNameEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Deadline"/>
+        android:fontFamily="@font/coming_soon"
+        android:hint="Course Name"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/descriptionEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/coming_soon"
+        android:hint="What is this for?"
+        android:minHeight="48dp" />
+
+    <TextView
+        android:id="@+id/dueDateTextView"
+        android:layout_width="156dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/coming_soon"
+        android:gravity="center"
+        android:hint="Exam Date: MM/DD"
+        android:inputType="date"
+        android:minHeight="48dp" />
 
     <Button
         android:id="@+id/addButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add Task"/>
+        android:backgroundTint="@color/black"
+        android:text="Add to List"/>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
-
-        <LinearLayout
-            android:id="@+id/todoListLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"/>
-
-    </ScrollView>
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/taskListLayout"
+        android:layout_width="376dp"
+        android:layout_height="610dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </LinearLayout>
